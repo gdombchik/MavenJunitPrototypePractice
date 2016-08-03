@@ -1,4 +1,4 @@
-package com.cucumber.MavenJunitPrototypePractice;
+package com.selenium.MavenJunitPrototypePractice;
 
 import org.junit.Test;
 import org.junit.Assert;

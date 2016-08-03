@@ -1,4 +1,4 @@
-package com.cucumber.MavenJunitPrototypePractice;
+package com.selenium.MavenJunitPrototypePractice;
 
 import java.util.List;
 
@@ -11,19 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class Five_WebDriverLocators {
-
-	WebDriver driver;
-	
-	@Before
-	public void setUp(){
-		driver = new FirefoxDriver();
-	}
-	
-	@After
-	public void tearDown(){
-		driver.quit();
-	}
+public class Five_WebDriverLocators extends AbstractWebDriver {
 	
 	@Test
 	public void webDriverLocators(){
@@ -34,8 +22,6 @@ public class Five_WebDriverLocators {
 		//webElement.submit();
 		//Assert.assertTrue(webElement.get);
 		*/
-		
-		driver.navigate().to("http://thetestroom.com/webapp/");
 		
 		//---Locators--
 		//1.  By ID (the preferred method)

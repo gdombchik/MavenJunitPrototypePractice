@@ -1,4 +1,4 @@
-package com.cucumber.MavenJunitPrototypePractice;
+package com.selenium.MavenJunitPrototypePractice;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import Utils.WebDriverUtils;
+import com.selenium.utils.WebDriverUtils;
 
 public class Eleven_CssSelector extends AbstractPageStepDefinition {
 

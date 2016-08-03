@@ -1,4 +1,4 @@
-package com.cucumber.MavenJunitPrototypePractice;
+package com.selenium.MavenJunitPrototypePractice;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -8,21 +8,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Six_WebDriverAssertions {
+public class Six_WebDriverAssertions extends AbstractWebDriver {
 
-	WebDriver driver;
-	
-	@Before
-	public void setUp(){
-		driver = new ChromeDriver();
-		driver.navigate().to("http://thetestroom.com/webapp/");
-	}
-	
-	@After
-	public void tearDown(){
-		driver.quit();
-	}
-	
 	@Test
 	public void webDriverAssertions(){
 		click(By.id("contact_link"));

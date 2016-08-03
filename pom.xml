@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.cucumber</groupId>
+	<groupId>com.selenium</groupId>
 	<artifactId>MavenJunitPrototypePractice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
@@ -10,9 +10,19 @@
 	<name>MavenJunitPrototypePractice</name>
 	<url>http://maven.apache.org</url>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
+		  <properties>
+    <maven.compiler.source>7</maven.compiler.source>
+    <maven.compiler.target>7</maven.compiler.target>
+  </properties>
+
+  <build>
+  <resources>
+    <resource>
+      <directory>src/test/java</directory>
+      <excludes><exclude>**/*.java</exclude></excludes>
+    </resource>
+  </resources>
+</build>
 
 	<dependencies>
 		<dependency>
@@ -26,9 +36,14 @@
 			<version>2.53.0</version>
 		</dependency>
 		<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>htmlunit-driver</artifactId>
-    <version>2.21</version>
-</dependency>
+		    <groupId>org.seleniumhq.selenium</groupId>
+		    <artifactId>htmlunit-driver</artifactId>
+		    <version>2.21</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.github.detro</groupId>
+		    <artifactId>phantomjsdriver</artifactId>
+		    <version>1.2.0</version>
+		</dependency>
 	</dependencies>
 </project>
