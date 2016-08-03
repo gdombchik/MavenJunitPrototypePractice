@@ -7,8 +7,8 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import pageObjectZoo.ContactConfirmationPage;
-import pageObjectZoo.ContactPage;
+import com.selenium.pageObjectZoo.ContactConfirmationPage;
+import com.selenium.pageObjectZoo.ContactPage;
 
 public class TwentyTwo_Waiting extends AbstractWebDriver {
 	
@@ -20,7 +20,7 @@ public class TwentyTwo_Waiting extends AbstractWebDriver {
 		
 		//sleep(5);
 				
-		contactPage = contactPage.setNameField(propertyManager.contactFormNameField,propertyManager.contactFormNameValue);
+		contactPage = contactPage.setNameField(propertyManager.getContactFormNameField(),propertyManager.getContactFormNameValue());
 		contactPage = contactPage.setAddressField("test address");
 		contactPage = contactPage.setEmailField("test email");
 		contactPage = contactPage.setPostCodeField("test post code");

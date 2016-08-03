@@ -6,10 +6,11 @@ import java.util.Properties;
 
 public class PropertyManager {
 
-	public String contactFormNameField = "";
-	public String contactFormNameValue = "";
+	private String contactFormNameField;
+	private String contactFormNameValue;
 	private String phantomJSDriver;
-	
+	private String screenShot;
+
 	public void generateProperty(){
 		Properties prop = new Properties();
 		InputStream input = null;
@@ -18,13 +19,29 @@ public class PropertyManager {
 			input = this.getClass().getClassLoader().getResourceAsStream("com/selenium/propertyManager/parameters.properties");
 			prop.load(input);
 			
-			contactFormNameField = prop.get("name_field").toString();
-			contactFormNameValue = prop.get("name_value").toString();
-			
+			setContactFormNameField(prop.get("name_field").toString());
+			setContactFormNameValue(prop.get("name_value").toString());
 			setPhantomJSDriver(prop.get("phantomJSDriver").toString());
+			setScreenShot(prop.get("screenShot").toString());
 		}catch(IOException e){
 			e.printStackTrace();
 		}
+	}
+	
+	public String getContactFormNameField() {
+		return contactFormNameField;
+	}
+
+	public void setContactFormNameField(String contactFormNameField) {
+		this.contactFormNameField = contactFormNameField;
+	}
+
+	public String getContactFormNameValue() {
+		return contactFormNameValue;
+	}
+
+	public void setContactFormNameValue(String contactFormNameValue) {
+		this.contactFormNameValue = contactFormNameValue;
 	}
 	
 	public String getPhantomJSDriver() {
@@ -35,4 +52,11 @@ public class PropertyManager {
 		this.phantomJSDriver = phantomJSDriver;
 	}
 	
+	public String getScreenShot() {
+		return screenShot;
+	}
+
+	public void setScreenShot(String screenShot) {
+		this.screenShot = screenShot;
+	}
 }

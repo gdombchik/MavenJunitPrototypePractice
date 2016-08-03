@@ -2,7 +2,7 @@ package com.selenium.MavenJunitPrototypePractice;
 
 import org.junit.Test;
 
-import pageObjectZoo.ContactPage;
+import com.selenium.pageObjectZoo.ContactPage;
 
 public class Fourteen_ParameterManagement extends AbstractWebDriver{
 	
@@ -10,9 +10,9 @@ public class Fourteen_ParameterManagement extends AbstractWebDriver{
 	public void parameterManagement(){
 		//Click on the contact page
 		ContactPage contactPage = landingPage.navigateToContactPage();
-		contactPage.setNameField(propertyManager.contactFormNameField,propertyManager.contactFormNameValue);
-		System.out.println(propertyManager.contactFormNameField);
-		System.out.println(propertyManager.contactFormNameValue);
+		contactPage.setNameField(propertyManager.getContactFormNameField(),propertyManager.getContactFormNameValue());
+		System.out.println(propertyManager.getContactFormNameField());
+		System.out.println(propertyManager.getContactFormNameValue());
 	}
 	
 }

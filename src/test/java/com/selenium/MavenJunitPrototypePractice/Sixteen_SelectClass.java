@@ -3,7 +3,7 @@ package com.selenium.MavenJunitPrototypePractice;
 import org.junit.Test;
 import org.junit.Assert;
 
-import pageObjectZoo.AdoptionPage;
+import com.selenium.pageObjectZoo.AdoptionPage;
 
 public class Sixteen_SelectClass extends AbstractWebDriver {
 	

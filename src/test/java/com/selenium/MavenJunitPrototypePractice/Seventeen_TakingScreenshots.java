@@ -2,12 +2,11 @@ package com.selenium.MavenJunitPrototypePractice;
 
 import org.junit.Test;
 
+import com.selenium.pageObjectZoo.AboutPage;
+import com.selenium.pageObjectZoo.AdoptionPage;
+import com.selenium.pageObjectZoo.ContactPage;
+import com.selenium.pageObjectZoo.LandingPage;
 import com.selenium.utils.WebDriverUtils;
-
-import pageObjectZoo.AboutPage;
-import pageObjectZoo.AdoptionPage;
-import pageObjectZoo.ContactPage;
-import pageObjectZoo.LandingPage;
 
 public class Seventeen_TakingScreenshots extends AbstractWebDriver {
 

@@ -1,4 +1,4 @@
-package pageObjectZoo;
+package com.selenium.pageObjectZoo;
 
 import org.openqa.selenium.WebDriver;
 

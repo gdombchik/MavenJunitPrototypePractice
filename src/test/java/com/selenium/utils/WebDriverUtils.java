@@ -12,6 +12,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.selenium.propertyManager.PropertyManager;
+
 
 public class WebDriverUtils{
 
@@ -24,7 +26,10 @@ public class WebDriverUtils{
 	public void takeStreenShot(String screenShotName){
 		File screenShotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(screenShotFile, new File("/Users/gregorydombchik/Documents/workspace_luna/MavenJunitPrototypePractice/screenshots/" + screenShotName + ".png"));			
+			PropertyManager propertyManager = new PropertyManager();
+			propertyManager.generateProperty();
+			//FileUtils.copyFile(screenShotFile, new File("/Users/gregorydombchik/Documents/workspace_luna/MavenJunitPrototypePractice/screenshots/" + screenShotName + ".png"));
+			FileUtils.copyFile(screenShotFile, new File(propertyManager.getScreenShot() + screenShotName + ".png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

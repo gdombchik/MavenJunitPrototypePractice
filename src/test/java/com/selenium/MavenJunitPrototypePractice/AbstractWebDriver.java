@@ -4,9 +4,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 
+import com.selenium.pageObjectZoo.LandingPage;
 import com.selenium.propertyManager.PropertyManager;
-
-import pageObjectZoo.LandingPage;
 
 /*
  * Can be used by all tests that use the Selenium WebDriver.
