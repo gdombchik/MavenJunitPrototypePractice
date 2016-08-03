@@ -19,6 +19,7 @@ import org.junit.runners.Suite;
 	Sixteen_SelectClass.class,
 	Seventeen_TakingScreenshots.class, //can not be used with HtmlUnitDriver
 	Eighteen_HeadlessBrowser.class
+	//Extra comment.
 })
 
 public class TestNine_AllSuite {
