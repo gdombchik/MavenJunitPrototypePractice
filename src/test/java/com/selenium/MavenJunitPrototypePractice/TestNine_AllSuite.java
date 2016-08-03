@@ -1,4 +1,4 @@
-package com.selenium.MavenJunitPrototypePractice;
+package com.selenium.mavenJunitPrototypePractice;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
