@@ -10,6 +10,9 @@ public class LandingPage extends AbstractPage{
 	@FindBy(name = "nav_contact")
 	private WebElement contactLink;
 	
+	@FindBy(xpath = "//a[contains(@id,'contact_link')]")
+	private WebElement contactLinkXPath;
+	
 	@FindBy(name = "nav_adopt")
 	private WebElement adoptionLink;
 	
@@ -28,6 +31,11 @@ public class LandingPage extends AbstractPage{
 		//Using PageFactory pattern
 		contactLink.click();
 		return PageFactory.initElements(driver, ContactPage.class);
+	}
+	
+	public ContactPage navigateToContactPageUsingXPath(){
+		contactLinkXPath.click();
+		return PageFactory.initElements(driver, ContactPage.class); 
 	}
 	
 	public AdoptionPage navigateToAdoptionPage(){

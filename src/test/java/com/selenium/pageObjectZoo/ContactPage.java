@@ -10,6 +10,9 @@ public class ContactPage extends AbstractPage{
 	
 	@FindBy(name = "nav_home")
 	private WebElement homeLink;
+	
+	@FindBy(xpath = "//input[@name='email_field']")
+	private WebElement emailField;
 
 	public ContactPage(WebDriver driver){
 		super(driver);
@@ -18,6 +21,11 @@ public class ContactPage extends AbstractPage{
 	public ContactPage setNameField(String name,String value){
 		driver.findElement(By.name(name)).sendKeys(value);
 		return new ContactPage(driver);
+	}
+	
+	public ContactPage setNameFieldXPath(String value){
+		emailField.sendKeys(value);
+		return PageFactory.initElements(driver, ContactPage.class);
 	}
 	
 	public ContactPage setAddressField(String addressField){
@@ -47,5 +55,13 @@ public class ContactPage extends AbstractPage{
 		//Using the PageFactory pattern
 		homeLink.click();
 		return PageFactory.initElements(driver, LandingPage.class);
+	}
+	
+	public WebElement getEmailField() {
+		return emailField;
+	}
+
+	public void setEmailField(WebElement emailField) {
+		this.emailField = emailField;
 	}
 }
