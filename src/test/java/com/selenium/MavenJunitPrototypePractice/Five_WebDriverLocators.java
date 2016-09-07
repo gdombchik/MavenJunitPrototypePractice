@@ -44,10 +44,15 @@ public class Five_WebDriverLocators extends AbstractWebDriver {
 		System.out.println(elements.get(0).getText());
 		
 		//5.  By LinkText
+		Assert.assertTrue(driver.findElement(By.linkText("HOME")).getText().equals("HOME"));
 		
 		//6.  By Partial LinkText
+		Assert.assertTrue(driver.findElement(By.partialLinkText("HO")).getText().equals("HOME"));
 		
-		//7.  By XPath
+		//7.  By Tag Name
+		Assert.assertTrue(driver.findElement(By.tagName("p")).getText().contains("month"));
+		
+		//8.  By XPath
 		//http://slesinsky.org/brian/code/xpath_checker.html
 		//In Firefox, right click on item on web page and select “View XPath”
 		
