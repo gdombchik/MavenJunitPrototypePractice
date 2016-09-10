@@ -12,24 +12,10 @@ import org.openqa.selenium.WebElement;
 
 import com.selenium.utils.WebDriverUtils;
 
-public class Eleven_CssSelector extends AbstractPageStepDefinition {
-
-	WebDriver driver;
-	
-	@Before
-	public void setUps(){
-		driver = getWebdriver();
-	}
-	
-	@After
-	public void tearDown(){
-		driver.quit();
-	}
+public class Eleven_CssSelector extends AbstractWebDriver{
 	
 	@Test
-	public void cssSelector(){
-		driver.navigate().to("http://www.thetestroom.com/webapp/");
-		
+	public void cssSelector(){		
 		//1.  id --> id uses the hash key (#)
 		driver.findElement(By.cssSelector("#contact_link")).click();
 		
@@ -51,8 +37,6 @@ public class Eleven_CssSelector extends AbstractPageStepDefinition {
 		//4.  attribute --> ["name of the attribute" = "value of the attribute"]
 		driver.findElement(By.cssSelector("[href='adoption.html']")).click();
 		Assert.assertTrue(driver.getTitle().equals("Adoption"));
-		
-		
 	}
 	
 }
